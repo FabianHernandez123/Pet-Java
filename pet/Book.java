@@ -42,20 +42,21 @@ public class Book {
 		this.genre = genre; 
 	}
 	
-	public boolean isTextbook(String genre) {
+	public boolean isTextbook() {
 		return genre.equalsIgnoreCase("textbook");
 	}
 	
-	public String bookSize(int numberPages) {
+	public String bookSize() {
+		String output; 
 		if (numberPages<=150) {
-			System.out.println("That's a short book");
+			output = "That's a short book";
 		} else if (numberPages > 150 && numberPages <= 350) {
-			System.out.println("A medium sized text");
+			output = "A medium sized text";
 		} else if (numberPages > 350 && numberPages <= 700) {
-			System.out.println("How long's that going to take to read?");
+			output = "How long's that going to take to read?";
 		} else {
-			System.out.println("That's a tome or a brick.");
-		}
+			output = "That's a tome or a brick.";
+		} return output; 
 	}
 	
 }
